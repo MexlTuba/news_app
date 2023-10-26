@@ -9,11 +9,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_svg: ^2.0.8
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/svg/
+  fonts:
+    - family: Gellix
+      fonts:
+        - asset: fonts/Gellix-Regular.ttf
+          weight: 400
+        - asset: fonts/Gellix-Bold.ttf
+          weight: 700

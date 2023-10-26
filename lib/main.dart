@@ -1,4 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:news_app/screens/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,11 +13,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return SafeArea(
+      child: const MaterialApp(
+        title: 'Mobile News App',
+        home: Scaffold(backgroundColor: Color(0xffFCFCFC), body: HomePage()),
       ),
     );
   }
