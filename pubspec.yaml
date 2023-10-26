@@ -27,5 +27,10 @@ flutter:
       fonts:
         - asset: fonts/Gellix-Regular.ttf
           weight: 400
+        - asset: fonts/Gellix-Medium.ttf
+          weight: 500
+        - asset: fonts/Gellix-SemiBold.ttf
+          weight: 600
         - asset: fonts/Gellix-Bold.ttf
           weight: 700
+
