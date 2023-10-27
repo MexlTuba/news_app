@@ -45,11 +45,17 @@ class ShortsCard extends StatelessWidget {
                             alignment: Alignment.center,
                             children: [
                               Container(
-                                child: Image.asset(
-                                  shorts.shortsImage,
-                                  width: 70,
-                                  height: 70,
-                                  fit: BoxFit.cover,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: Image.asset(
+                                    shorts.shortsImage,
+                                    width: 70,
+                                    height: 70,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               SvgPicture.asset('assets/svg/play_icon.svg',

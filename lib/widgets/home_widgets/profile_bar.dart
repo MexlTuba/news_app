@@ -11,7 +11,16 @@ class ProfileBar extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(31, 56, 166, 35),
       child: Row(
         children: [
-          Image.asset('assets/images/Vector.png'),
+          Container(
+            width: 49,
+            height: 49,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Image.asset('assets/images/cutie.png')),
+          ),
           SizedBox(width: 16),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
