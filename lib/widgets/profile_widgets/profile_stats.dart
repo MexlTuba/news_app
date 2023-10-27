@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/models/author.dart';
 
 class ProfileStats extends StatelessWidget {
-  const ProfileStats({
-    super.key,
-  });
+  const ProfileStats({super.key, required this.author});
+  final Author author;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 30, right: 30),
+      padding: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
       child: Row(
         children: [
           Container(
@@ -25,7 +25,7 @@ class ProfileStats extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '00.00k',
+                      author.followers,
                       style: TextStyle(
                         fontFamily: 'Gellix',
                         fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class ProfileStats extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '00.00k',
+                      author.posts,
                       style: TextStyle(
                         fontFamily: 'Gellix',
                         fontWeight: FontWeight.bold,
@@ -87,7 +87,7 @@ class ProfileStats extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '00.00k',
+                      author.following,
                       style: TextStyle(
                         fontFamily: 'Gellix',
                         fontWeight: FontWeight.bold,

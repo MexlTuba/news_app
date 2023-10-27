@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:news_app/models/news.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class NewsCard extends StatelessWidget {
   const NewsCard({
@@ -77,7 +78,7 @@ class NewsCard extends StatelessWidget {
                               shape: BoxShape.circle,
                               color: const Color(0xff25282B),
                               image: DecorationImage(
-                                image: AssetImage(news.authorImage),
+                                image: AssetImage(news.author.authorImage),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -89,7 +90,7 @@ class NewsCard extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    news.author,
+                                    news.author.fname + ' ' + news.author.lname,
                                     style: TextStyle(
                                       fontFamily: 'Gellix',
                                       fontWeight: FontWeight.w600,
@@ -114,6 +115,28 @@ class NewsCard extends StatelessWidget {
                                 ],
                               )
                             ],
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Container(
+                                  height: 37,
+                                  width: 37,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFEFF5F4),
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Center(
+                                    child: SvgPicture.asset(
+                                      'assets/svg/share_icon.svg',
+                                      height: 20,
+                                      width: 20,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           )
                         ],
                       ),

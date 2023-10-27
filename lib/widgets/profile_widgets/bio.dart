@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:news_app/models/author.dart';
 
 class Bio extends StatelessWidget {
-  const Bio({
-    super.key,
-  });
+  const Bio({super.key, required this.author});
+  final Author author;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,8 @@ class Bio extends StatelessWidget {
         children: [
           Flexible(
             child: Text(
-              'BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO BIO',
+              author.bio,
+              textAlign: TextAlign.justify,
               style: TextStyle(
                 fontFamily: 'Gellix',
                 fontWeight: FontWeight.w500,

@@ -1,11 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/models/author.dart';
 
 class ProfileHeader extends StatelessWidget {
-  const ProfileHeader({
-    super.key,
-  });
+  const ProfileHeader({super.key, required this.author});
+  final Author author;
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +22,21 @@ class ProfileHeader extends StatelessWidget {
               borderRadius: BorderRadius.circular(15.0),
               color: const Color(0xff5474FD),
             ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(15.0),
+              child: Image.asset(
+                author.authorImage,
+                width: 70,
+                height: 70,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "FNAME LNAME",
+                author.fname + ' ' + author.lname,
                 style: TextStyle(
                   fontFamily: 'Gellix',
                   fontWeight: FontWeight.bold,
@@ -38,7 +48,7 @@ class ProfileHeader extends StatelessWidget {
                 height: 5,
               ),
               Text(
-                'OCCUPATION',
+                author.occupation,
                 style: TextStyle(
                   fontFamily: 'Gellix',
                   fontWeight: FontWeight.normal,
