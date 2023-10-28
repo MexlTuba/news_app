@@ -24,7 +24,8 @@ class MainApp extends StatelessWidget {
         home: Scaffold(
           bottomNavigationBar: BottomNavBar(selectedIndex: selectedIndex),
           backgroundColor: const Color(0xffFCFCFC),
-          body: SingleChildScrollView(child: HomePage()),
+          body: SingleChildScrollView(
+              child: HomePage(selectedIndex: selectedIndex)),
         ),
       ),
     );

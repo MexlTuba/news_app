@@ -11,26 +11,33 @@ import 'package:news_app/widgets/profile_widgets/profile_header.dart';
 import 'package:news_app/widgets/profile_widgets/profile_stats.dart';
 
 class AuthorPage extends StatelessWidget {
-  const AuthorPage({super.key, required this.author});
+  const AuthorPage(
+      {super.key, required this.author, required this.selectedIndex});
+  final ValueNotifier<int> selectedIndex;
   final Author author;
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          ProfileHeader(
-            author: author,
-          ),
-          Bio(author: author),
-          ProfileStats(author: author),
-          PostsHeader(
-            author: author,
-          ),
-          PostsList(author: author),
-          PopularsHeader(author: author),
-          PopularList(author: author),
-        ],
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ProfileHeader(
+              author: author,
+            ),
+            Bio(author: author),
+            ProfileStats(author: author),
+            PostsHeader(
+              author: author,
+            ),
+            PostsList(
+              author: author,
+              selectedIndex: selectedIndex,
+            ),
+            PopularsHeader(author: author),
+            PopularList(author: author, selectedIndex: selectedIndex),
+          ],
+        ),
       ),
     );
   }

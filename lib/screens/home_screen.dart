@@ -9,7 +9,8 @@ import 'package:news_app/widgets/home_widgets/shorts_card.dart';
 import 'package:news_app/widgets/home_widgets/shorts_header.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  final ValueNotifier<int> selectedIndex;
+  const HomePage({super.key, required this.selectedIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
         ProfileBar(),
         SearchBarWidget(onTextChanged: (value) => ''),
         HashtagFilters(),
-        NewsCard(),
+        NewsCard(selectedIndex: selectedIndex),
         ShortsHeader(),
         ShortsCard()
       ],

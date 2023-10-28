@@ -15,7 +15,7 @@ void populateArticles() {
         datePosted: 'October 26, 2023',
         readLength: '5 min read',
         description:
-            'A team of researchers led by Dr. Alan Turing has achieved a significant breakthrough in quantum computing, accelerating the journey towards creating unhackable networks. The newly developed quantum algorithm can solve complex problems 100 times faster than traditional computers, marking a milestone in cryptography and network security.',
+            'A team of researchers led by Dr. Alan Turing has achieved a significant breakthrough in quantum computing, accelerating the journey towards creating unhackable networks. The newly developed quantum algorithm can solve complex problems 100 times faster than traditional computers, marking a milestone in cryptography and network security.A team of researchers led by Dr. Alan Turing has achieved a significant breakthrough in quantum computing, accelerating the journey towards creating unhackable networks. The newly developed quantum algorithm can solve complex problems 100 times faster than traditional computers, marking a milestone in cryptography and network security.A team of researchers led by Dr. Alan Turing has achieved a significant breakthrough in quantum computing, accelerating the journey towards creating unhackable networks. The newly developed quantum algorithm can solve complex problems 100 times faster than traditional computers, marking a milestone in cryptography and network security.',
         timePosted: '9:32 pm',
         category: 'Science'),
     News(
@@ -87,7 +87,7 @@ void populateArticles() {
         newsImages: [
           'assets/images/mindfulness.png',
           'assets/images/mindfulness2.png',
-          'assets/images/enigma3.png'
+          'assets/images/mindfulness3.png'
         ],
         author: authorList[1],
         monthDayPosted: 'August 10',
@@ -167,7 +167,7 @@ void populateArticles() {
     News(
         headline: 'Following Father’s Footsteps: Armstrong on Lunar Legacy',
         newsImages: [
-          'assets/images/lunar_legacy',
+          'assets/images/lunar_legacy.png',
           'assets/images/lunar_legacy2.png',
           'assets/images/lunar_legacy3.png'
         ],
