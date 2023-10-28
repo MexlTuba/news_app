@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/author.dart';
+import 'package:news_app/models/news.dart';
 import 'package:news_app/models/populate_articles.dart';
 import 'package:news_app/screens/author_screen.dart';
+import 'package:news_app/screens/details_screen.dart';
 import 'package:news_app/screens/home_screen.dart';
 import 'package:news_app/widgets/bottom_navbar.dart';
 
@@ -22,10 +24,7 @@ class MainApp extends StatelessWidget {
         home: Scaffold(
           bottomNavigationBar: BottomNavBar(selectedIndex: selectedIndex),
           backgroundColor: const Color(0xffFCFCFC),
-          body: SingleChildScrollView(
-              child: AuthorPage(
-            author: authorList[0],
-          )),
+          body: SingleChildScrollView(child: HomePage()),
         ),
       ),
     );

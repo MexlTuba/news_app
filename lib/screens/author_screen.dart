@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:news_app/models/author.dart';
+import 'package:news_app/widgets/profile_widgets/popular_list.dart';
+import 'package:news_app/widgets/profile_widgets/populars_header.dart';
 import 'package:news_app/widgets/profile_widgets/posts_header.dart';
 import 'package:news_app/widgets/profile_widgets/bio.dart';
 import 'package:news_app/widgets/profile_widgets/posts_lists.dart';
@@ -14,18 +16,22 @@ class AuthorPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ProfileHeader(
-          author: author,
-        ),
-        Bio(author: author),
-        ProfileStats(author: author),
-        PostsHeader(
-          author: author,
-        ),
-        PostsList(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          ProfileHeader(
+            author: author,
+          ),
+          Bio(author: author),
+          ProfileStats(author: author),
+          PostsHeader(
+            author: author,
+          ),
+          PostsList(author: author),
+          PopularsHeader(author: author),
+          PopularList(author: author),
+        ],
+      ),
     );
   }
 }

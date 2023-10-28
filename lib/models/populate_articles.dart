@@ -5,8 +5,13 @@ void populateArticles() {
   var newsArticlesAlan = [
     News(
         headline: 'Quantum Leap: Breakthrough in Quantum Computing',
-        newsImage: 'assets/images/quantum.png',
+        newsImages: [
+          'assets/images/quantum.png',
+          'assets/images/quantum2.png',
+          'assets/images/quantum3.png'
+        ],
         author: authorList[0],
+        monthDayPosted: 'October 26',
         datePosted: 'October 26, 2023',
         readLength: '5 min read',
         description:
@@ -15,8 +20,13 @@ void populateArticles() {
         category: 'Science'),
     News(
         headline: 'The Turing Test: Redefining Machine Intelligence',
-        newsImage: 'assets/images/turing_test.png',
+        newsImages: [
+          'assets/images/turing_test.png',
+          'assets/images/turing_test2.png',
+          'assets/images/turing_test3.png'
+        ],
         author: authorList[0],
+        monthDayPosted: 'August 14',
         datePosted: 'August 14, 2023',
         readLength: '4 min read',
         description:
@@ -25,8 +35,13 @@ void populateArticles() {
         category: 'Science'),
     News(
         headline: 'Enigma Decoded: The Power of Computational Logic',
-        newsImage: 'assets/images/enigma.png',
+        newsImages: [
+          'assets/images/enigma.png',
+          'assets/images/enigma2.png',
+          'assets/images/enigma3.png'
+        ],
         author: authorList[0],
+        monthDayPosted: 'July 9',
         datePosted: 'July 9, 2023',
         readLength: '6 min read',
         description:
@@ -38,8 +53,13 @@ void populateArticles() {
     News(
         headline:
             'Harmony of Healing: New Research Illuminates the Therapeutic Benefits of Music',
-        newsImage: 'assets/images/music.png',
+        newsImages: [
+          'assets/images/music.png',
+          'assets/images/music2.png',
+          'assets/images/music3.png'
+        ],
         author: authorList[1],
+        monthDayPosted: 'November 3',
         datePosted: 'November 3, 2023',
         readLength: '4 min read',
         description:
@@ -48,8 +68,13 @@ void populateArticles() {
         category: 'Music'),
     News(
         headline: 'Tuning into Wellness: The Resonance of Sound Healing',
-        newsImage: 'assets/images/sound_healing.png',
+        newsImages: [
+          'assets/images/sound_healing.png',
+          'assets/images/sound_healing2.png',
+          'assets/images/sound_healing3.png'
+        ],
         author: authorList[1],
+        monthDayPosted: 'September 21',
         datePosted: 'September 21, 2023',
         readLength: '5 min read',
         description:
@@ -59,8 +84,13 @@ void populateArticles() {
     News(
         headline:
             'Melodies of Mindfulness: Incorporating Music into Daily Meditation',
-        newsImage: 'assets/images/mindfulness.png',
+        newsImages: [
+          'assets/images/mindfulness.png',
+          'assets/images/mindfulness2.png',
+          'assets/images/enigma3.png'
+        ],
         author: authorList[1],
+        monthDayPosted: 'August 10',
         datePosted: 'August 10, 2023',
         readLength: '6 min read',
         description:
@@ -72,8 +102,13 @@ void populateArticles() {
     News(
         headline:
             'Trend Toward Sustainability: Fashion Industry Embraces Eco-Friendly Practices',
-        newsImage: 'assets/images/sustainable.png',
+        newsImages: [
+          'assets/images/sustainable.png',
+          'assets/images/sustainable2.png',
+          'assets/images/sustainable3.png'
+        ],
         author: authorList[2],
+        monthDayPosted: 'October 30',
         datePosted: 'October 30, 2023',
         readLength: '6 min read',
         description:
@@ -82,8 +117,13 @@ void populateArticles() {
         category: 'Fashion'),
     News(
         headline: 'Fabio Chic: The Maestro of Upcycled Fashion',
-        newsImage: 'assets/images/upcycled_fashion.png',
+        newsImages: [
+          'assets/images/upcycled_fashion.png',
+          'assets/images/upcycled_fashion2.png',
+          'assets/images/upcycled_fashion3.png'
+        ],
         author: authorList[2],
+        monthDayPosted: 'September 18',
         datePosted: 'September 18, 2023',
         readLength: '5 min read',
         description:
@@ -93,8 +133,13 @@ void populateArticles() {
     News(
         headline:
             'Fashion Forward: Fabio Chic’s Vision for a Sustainable Industry',
-        newsImage: 'assets/images/fashion_forward.png',
+        newsImages: [
+          'assets/images/fashion_forward.png',
+          'assets/images/fashion_forward2.png',
+          'assets/images/fashion_forward3.png'
+        ],
         author: authorList[2],
+        monthDayPosted: 'August 22',
         datePosted: 'August 22, 2023',
         readLength: '7 min read',
         description:
@@ -106,8 +151,13 @@ void populateArticles() {
     News(
         headline:
             'Beyond the Blue: First Commercial Spaceflight Successfully Lands on the Moon',
-        newsImage: 'assets/images/moonLand.png',
+        newsImages: [
+          'assets/images/moonLand.png',
+          'assets/images/moonLand2.png',
+          'assets/images/moonLand3.png'
+        ],
         author: authorList[3],
+        monthDayPosted: 'November 5',
         datePosted: 'November 5, 2023',
         readLength: '7 min read',
         description:
@@ -116,8 +166,13 @@ void populateArticles() {
         category: 'Science'),
     News(
         headline: 'Following Father’s Footsteps: Armstrong on Lunar Legacy',
-        newsImage: 'assets/images/lunar_legacy.png',
+        newsImages: [
+          'assets/images/lunar_legacy',
+          'assets/images/lunar_legacy2.png',
+          'assets/images/lunar_legacy3.png'
+        ],
         author: authorList[3],
+        monthDayPosted: 'September 1',
         datePosted: 'September 1, 2023',
         readLength: '5 min read',
         description:
@@ -126,8 +181,13 @@ void populateArticles() {
         category: 'Space Exploration'),
     News(
         headline: 'The New Frontier: Armstrong Advocates for Mars Colonization',
-        newsImage: 'assets/images/mars_colonization.png',
+        newsImages: [
+          'assets/images/mars_colonization.png',
+          'assets/images/mars_colonization2.png',
+          'assets/images/mars_colonization3.png'
+        ],
         author: authorList[3],
+        monthDayPosted: 'June 12',
         datePosted: 'June 12, 2023',
         readLength: '6 min read',
         description:

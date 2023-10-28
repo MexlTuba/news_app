@@ -18,7 +18,7 @@ class NewsCard extends StatelessWidget {
         child: ListView.builder(
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
-          itemCount: NewsList.length,
+          itemCount: 4,
           itemBuilder: (context, index) {
             News news = NewsList[index];
             return Padding(
@@ -47,7 +47,7 @@ class NewsCard extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
                           image: DecorationImage(
-                            image: AssetImage(news.newsImage),
+                            image: AssetImage(news.newsImages[0]),
                             fit: BoxFit.cover,
                           ),
                         ),
